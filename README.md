@@ -4,7 +4,10 @@ Work In Progres
 admin = admin@toko.com (admin123)
 
 
+taruh toko_online di xampp/htdocs
 
+
+buka http://localhost/toko_online/login.php
 
 
 Menambahkan fitur mengganti banner
