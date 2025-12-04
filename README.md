@@ -1,6 +1,12 @@
 Work In Progres
 
 
+admin = admin@toko.com (admin123)
+
+
+
+
+
 Menambahkan fitur mengganti banner
 
 
@@ -10,3 +16,7 @@ menambahkan fungsi struk
 
 
 pembeli bisa melihat dan print struk
+
+
+
+Penambahan fitur pencarian.kategori.dll
