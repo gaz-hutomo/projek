@@ -11,6 +11,8 @@ taruh toko_online di xampp/htdocs
 
 buka http://localhost/toko_online/login.php
 
+-------------------------------------------------------------------------------------------------
+
 
 Menambahkan fitur mengganti banner
 
