@@ -10,10 +10,13 @@ taruh toko_online di xampp/htdocs
 
 
 buka http://localhost/toko_online/login.php
+
+
 -------------------------------------------------------------------------------------------------
 
 
 [CARA DOWNLOAD]
+-
 
 1.Klik tombol CODE/KODE yang berwarna hijau
 
