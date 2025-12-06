@@ -1,4 +1,6 @@
-Work In Progres
+[Selesai]
+
+untuk database sesuaikan namanya dengan file sql yang akan di import
 
 
 admin = admin@toko.com (admin123)
@@ -23,3 +25,11 @@ pembeli bisa melihat dan print struk
 
 
 Penambahan fitur pencarian.kategori.dll
+
+
+Penambahan side panel untuk admin
+
+
+penambahan tombol admin panel untuk admin
+
+merapihkan tulisan dan ui untuk user dan admin
