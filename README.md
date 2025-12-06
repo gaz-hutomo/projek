@@ -21,11 +21,13 @@ buka http://localhost/toko_online/login.php
 
 1.Klik tombol CODE/KODE yang berwarna hijau
 
-2.Klik Download ZIP
+2.Pilih Local/lokal
 
-3.Ekstrak ke folder yang diinginkan
+3.Klik Download ZIP
 
-4.Selesai
+4.Ekstrak ke folder yang diinginkan
+
+5.Selesai
 
 
 -------------------------------------------------------------------------------------------------
