@@ -1,4 +1,4 @@
-[Selesai]
+[Selesai] Versi 6 desember 2025
 
 untuk database sesuaikan namanya dengan file sql yang akan di import
 
