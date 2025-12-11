@@ -1,4 +1,4 @@
-[Selesai] Versi 6 desember 2025
+[Selesai] Versi 11 desember 2025
 -
 
 untuk database sesuaikan namanya dengan file sql yang akan di import
@@ -58,3 +58,5 @@ Penambahan side panel untuk admin
 penambahan tombol admin panel untuk admin
 
 merapihkan tulisan dan ui untuk user dan admin
+
+Menambahkan fitur banner cycling/ganti banner otomatis ke banner lain di sisi user
