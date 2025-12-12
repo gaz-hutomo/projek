@@ -4,6 +4,7 @@ include 'koneksi.php';
 include 'header.php'; 
 
 // --- Ambil data banner aktif untuk Carousel ---
+// Catatan: Asumsi kolom 'is_active' dan 'display_order' ada di tabel 'banners'.
 $banners_query = mysqli_query($conn, "SELECT * FROM banners WHERE is_active=1 ORDER BY display_order ASC, created_at DESC");
 $banners_count = mysqli_num_rows($banners_query);
 
@@ -28,9 +29,8 @@ $cats_query = mysqli_query($conn, "SELECT * FROM categories ORDER BY name ASC");
         <div class="carousel-item <?= $i++ == 0 ? 'active' : '' ?>">
             <a href="<?= !empty($b['link_url']) ? htmlspecialchars($b['link_url']) : '#' ?>">
                 <img src="assets/banner/<?= $b['image_file'] ?>" 
-                     class="d-block w-10" 
-                     alt="<?= $b['title'] ?>" 
-                     style="height: 237px; object-fit: cover;">
+                     class="d-block w-100 carousel-img-fit" 
+                     alt="<?= $b['title'] ?>">
             </a>
             <?php if (!empty($b['title'])): ?>
             <div class="carousel-caption d-none d-md-block text-start">
@@ -63,7 +63,7 @@ $cats_query = mysqli_query($conn, "SELECT * FROM categories ORDER BY name ASC");
 <h3 class="mb-3 border-bottom pb-2">Katalog Produk</h3>
 
 <div class="mb-4 d-flex flex-wrap">
-    <a href="index.php" class="btn btn-outline-black me-2 mb-2 <?= (!isset($_GET['kategori']) && !isset($_GET['keyword'])) ? 'active' : '' ?>">Semua</a>
+    <a href="index.php" class="btn btn-outline-dark me-2 mb-2 <?= (!isset($_GET['kategori']) && !isset($_GET['keyword'])) ? 'active' : '' ?>">Semua</a>
     
     <?php
     // Reset pointer kueri kategori
@@ -71,7 +71,7 @@ $cats_query = mysqli_query($conn, "SELECT * FROM categories ORDER BY name ASC");
     while($c = mysqli_fetch_assoc($cats_query)):
         $active = (isset($_GET['kategori']) && $_GET['kategori'] == $c['id']) ? 'active' : '';
     ?>
-    <a href="index.php?kategori=<?= $c['id'] ?>" class="btn btn-outline-black me-2 mb-2 <?= $active ?>">
+    <a href="index.php?kategori=<?= $c['id'] ?>" class="btn btn-outline-dark me-2 mb-2 <?= $active ?>">
         <?= $c['name'] ?>
     </a>
     <?php endwhile; ?>
@@ -102,7 +102,7 @@ $cats_query = mysqli_query($conn, "SELECT * FROM categories ORDER BY name ASC");
     // 2. Jika ada filter Kategori
     if (isset($_GET['kategori'])) {
         $cat_id = mysqli_real_escape_string($conn, $_GET['kategori']);
-        // BARIS YANG HARUS DIPERIKSA: PASTIKAN NAMA KOLOM ADALAH category_id
+        // PASTIKAN NAMA KOLOM ADALAH category_id (sesuai database Anda)
         $where .= " AND category_id = '$cat_id'"; 
     }
 
@@ -112,7 +112,7 @@ $cats_query = mysqli_query($conn, "SELECT * FROM categories ORDER BY name ASC");
     if (mysqli_num_rows($query) == 0) {
         echo "<div class='col-12 text-center py-5'>
                 <div class='alert alert-warning'>Produk tidak ditemukan. Coba kata kunci lain atau kategori berbeda.</div>
-                <a href='index.php' class='btn btn-black mt-3'>Lihat Semua Produk</a>
+                <a href='index.php' class='btn btn-dark mt-3'>Lihat Semua Produk</a>
               </div>";
     }
 
